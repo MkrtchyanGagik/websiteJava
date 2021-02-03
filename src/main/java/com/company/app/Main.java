@@ -4,6 +4,7 @@ import com.company.dao.AuthorDao;
 import com.company.dao.BookDao;
 import com.company.model.Author;
 import com.company.model.Book;
+import com.company.model.Gender;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class Main {
                     Author author = new Author();
                     author.setName(scanner.next());
                     author.setSurname(scanner.next());
+                    author.setGender(Gender.FEMALE);
                     Book book = new Book();
                     book.setTittle(scanner.next());
                     book.setPrice(scanner.nextInt());
@@ -52,7 +54,6 @@ public class Main {
 
             }
         }
-
 
     }
 }

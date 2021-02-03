@@ -14,11 +14,22 @@ public class Author {
     private String name;
     @Column
     private String surname;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "gender")
+    private Gender gender;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id" )
    private List<Book> books;
 
     public Author() {
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 
     public int getId() {
